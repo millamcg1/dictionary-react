@@ -191,16 +191,16 @@
 }
 
 .PhotosContainer {
-  margin-top: 2%; /* Adjust margin-top as a percentage */
+  margin-top: 2%;
   background-color: #ffffff;
-  padding: 10% 10% 50%; /* Adjust padding as a percentage */
+  padding: 10% 10% 10%; /* Adjust bottom padding to reduce the gap */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
   .PhotosContainer {
-    padding: 1% 1% 10%; /* Adjust padding for smaller screens */
+    padding: 1% 1% 5%; /* Adjust padding for smaller screens */
     margin-top: 1%; /* Adjust margin-top for smaller screens */
   }
 }
