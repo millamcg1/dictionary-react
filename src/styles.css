@@ -1,0 +1,129 @@
+.App-logo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.App-header {
+  margin: 0;
+  position: relative; /* Position relative for pseudo-element positioning */
+}
+
+.App-logo {
+  transition: transform 0.3s ease-in-out; /* Adjust timing and easing as needed */
+  margin-botton: 60px;
+  cursor: pointer;
+}
+
+.App-logo:hover {
+  transform: scale(1.1); /* Example: Scale up on hover */
+}
+
+.footer {
+  background-color: rgb(246, 126, 146);
+  min-height: 100vh; /* Ensures the footer takes at least the full viewport height */
+  padding-top: 200px; /* Adjusted padding top */
+  position: relative;
+  color: #ffffff; /* Set text color for footer */
+  font-family: "Quicksand", sans-serif;
+  margin-top: 40px; /* Add space on the top of the footer container */
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Adjust top position to control the wave height */
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the wave height */
+  background-color: rgb(246, 126, 146); /* Match background color */
+  --mask: radial-gradient(67.08px at 50% 90px, #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px, #0000 99%, #000 101%) 50% 30px/120px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.footer-content {
+  padding-top: 50px; /* Adjust padding top */
+  text-align: center; /* Center align text in the footer */
+}
+
+.footer h2,
+.footer h3,
+.footer h5 {
+  margin: 10px 0; /* Adjust margin */
+}
+
+.footer p {
+  margin: 10px 0; /* Adjust margin */
+}
+
+.footer ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 0;
+}
+
+.footer ul li {
+  display: inline-block; /* Display list items inline */
+  margin-right: 10px; /* Adjust spacing between list items */
+}
+
+.footer ul li:last-child {
+  margin-right: 0; /* Remove margin from last list item */
+}
+
+.footer hr {
+  border-color: #ffffff; /* Set border color */
+  margin: 20px auto; /* Center and adjust margin */
+  width: 50%; /* Adjust width */
+}
+
+.footer .icon {
+  font-size: 40px; /* Adjust icon size */
+  margin: 0 10px; /* Adjust spacing */
+  color: #ffffff; /* Set icon color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.footer .icon:hover {
+  color: pink; /* Change icon color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+.logo-container img {
+  width: 100px; /* Adjust logo size */
+  height: 100px; /* Adjust logo size */
+  display: block; /* Ensure image is block level */
+  margin: 0 auto; /* Center align logo */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 150px; /* Adjust padding top for smaller screens */
+  }
+
+  .footer::before {
+    top: -30px; /* Adjust top position of the wave for smaller screens */
+    height: 50px; /* Adjust wave height for smaller screens */
+  }
+
+  .footer-content {
+    padding-top: 30px; /* Adjust padding top for smaller screens */
+  }
+
+  .footer hr {
+    width: 70%; /* Adjust width of hr for smaller screens */
+  }
+
+  .footer .icon {
+    font-size: 30px; /* Adjust icon size for smaller screens */
+  }
+
+  .logo-container img {
+    width: 80px; /* Adjust logo size for smaller screens */
+    height: 80px; /* Adjust logo size for smaller screens */
+  }
+}

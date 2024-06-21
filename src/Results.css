@@ -1,0 +1,33 @@
+.Results {
+  margin-top: 40px;
+  text-align: left;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.WordSection {
+  margin-bottom: 20px;
+}
+
+.PhoneticsSection,
+.MeaningsSection {
+  margin-bottom: 20px;
+}
+
+.PhoneticsSection {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-botton: 20px;
+}
+
+.MeaningsSection {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+}

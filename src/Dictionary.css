@@ -1,0 +1,256 @@
+.Dictionary {
+  text-align: center;
+  margin: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.Dictionary {
+  text-align: center;
+}
+
+.Dictionary form {
+  margin-bottom: 20px;
+}
+
+.Dictionary input {
+  padding: 12px;
+  font-size: 18px;
+  width: 60%;
+  margin-right: 10px;
+  border: 2px solid #e4a7c5; /* Light pink border */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  outline: none; /* Remove default input focus outline */
+  transition: border-color 0.3s ease-in-out; /* Smooth border transition */
+}
+
+.Dictionary input:focus {
+  border-color: #e26a8d; /* Darker pink on focus */
+}
+
+.Dictionary button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #e26a8d; /* Pink background */
+  color: white; /* White text */
+  border: none; /* Remove button border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.Dictionary button:hover {
+  background-color: #e44669; /* Lighter pink on hover */
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  color: #ffffff; /* White color for loader */
+  background: radial-gradient(
+    farthest-side,
+    currentColor calc(100% - 6px),
+    #0000 calc(100% - 5px) 0
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 13px),
+    #000 calc(100% - 12px)
+  );
+  border-radius: 50%;
+  animation: l19 2s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+}
+
+.loader::after {
+  transform: rotate(45deg);
+}
+
+@keyframes l19 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.loader {
+  width: 20px; /* Adjusted width for smaller loader */
+  height: 20px; /* Adjusted height for smaller loader */
+  aspect-ratio: 1;
+  display: inline-block; /* Display inline with button text */
+  vertical-align: middle; /* Align vertically with button text */
+  color: #ffffff; /* White color for loader */
+  background: radial-gradient(
+    farthest-side,
+    currentColor calc(100% - 6px),
+    #0000 calc(100% - 5px) 0
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 13px),
+    #000 calc(100% - 12px)
+  );
+  border-radius: 50%;
+  animation: l19 2s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px, 10px 100%;
+  background-repeat: no-repeat;
+}
+
+.loader::after {
+  transform: rotate(45deg);
+}
+
+@keyframes l19 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.SearchButton {
+  display: inline-flex; /* Display flex inline with button text */
+  align-items: center; /* Align items vertically */
+  gap: 8px; /* Adjust space between button text and loader */
+  padding: 8px 16px; /* Adjust button padding */
+  background-color: #854f1d; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 8px; /* Button border radius */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.SearchButton:hover {
+  background-color: #6b3c15; /* Darker background color on hover */
+}
+
+.SuggestedWords {
+  margin-top: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow definition */
+  padding: 20px; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners */
+}
+.SuggestedWords h4 {
+  animation: colorChange 2s ease-in-out infinite; /* Apply animation */
+}
+
+/* Define the keyframes */
+@keyframes colorChange {
+  0% {
+    color: #b85b82;
+  } /* Dark pink color */
+  50% {
+    color: #e44258;
+  } /* Lighter pink color */
+  100% {
+    color: #b85b82;
+  } /* Dark pink color */
+}
+
+.ButtonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center align the buttons horizontally */
+}
+
+.SuggestedWordButton {
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center align button text */
+}
+
+.PhotosContainer {
+  margin-top: 2%; /* Adjust margin-top as a percentage */
+  background-color: #ffffff;
+  padding: 10% 10% 50%; /* Adjust padding as a percentage */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .PhotosContainer {
+    padding: 1% 1% 10%; /* Adjust padding for smaller screens */
+    margin-top: 1%; /* Adjust margin-top for smaller screens */
+  }
+}
+
+.PhotosContainer h4 {
+  animation: colorChange 2s ease-in-out infinite; /* Apply animation */
+}
+
+/* Define the keyframes */
+@keyframes colorChange {
+  0% {
+    color: #b85b82;
+  } /* Dark pink color */
+  50% {
+    color: #e44258;
+  } /* Lighter pink color */
+  100% {
+    color: #b85b82;
+  } /* Dark pink color */
+}
+
+.ButtonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center align the buttons horizontally */
+}
+
+.PhotoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .PhotoGrid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Adjust column widths for smaller screens */
+    gap: 8px; /* Adjust gap between grid items */
+    margin-top: 10px; /* Adjust margin-top for smaller screens */
+  }
+}
+
+.PhotoBox {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
